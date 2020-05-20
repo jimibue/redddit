@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :subs do
     resources :topics
   end
+
+  resources :topics do
+    resources :comments
+  end
+
   # get "/subs", to: "subs#index"
   # get "/subs/:id", to: "subs#show"
   # delete "/subs/:id", to: "subs#destroy"
